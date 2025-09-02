@@ -1,0 +1,149 @@
+/* ----------------------------------- GLOBALS -----------------------------------*/
+.container {
+  width: 1280px;
+  margin: 0 auto;
+  
+}
+
+/* ----------------------------------- HEADER -----------------------------------*/
+
+header img {
+  width: 80px;
+}
+
+header .container {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid lightgrey
+}
+
+header .container input {
+  width: 280px;
+  height: 40px;
+  border: 1px solid darkcyan;
+  background: darkcyan;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+}
+
+header .container input::placeholder {
+  color: white;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.right-header button {
+  width: 150px;
+  height: 40px;
+  border: 1px solid darkcyan;
+  background: darkcyan;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+}
+
+/* ----------------------------------- HOME -----------------------------------*/
+
+.home .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.home .container article {
+  margin-bottom: 20px;
+}
+
+.owner-details {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.product-image {
+  width: 240px;
+  height: 360px;
+  object-fit: cover;
+}
+
+/* ----------------------------------- OFFER -----------------------------------*/
+
+.offer-page .container {
+  display: flex;
+  gap: 20px;
+}
+
+.offer-page img {
+  width: 450px;
+
+}
+
+.product-image {
+  border-radius: 10px;
+}
+
+/* ----------------------------------- SIGNUP -----------------------------------*/
+
+.signup .container,
+.signup form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ----------------------------------- LOGIN -----------------------------------*/
+
+.login .container,
+.login form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ----------------------------------- PUBLISH -----------------------------------*/
+
+.publish form,
+.publish form section {
+  display: flex;
+  flex-direction: column;
+}
+
+.publish form div {
+  display: flex;
+}
+
+.publish form img {
+  height: 200px;
+}
+
+.publish input[type="file"] {
+  display: none;
+}
+
+#picture-label {
+  color: darkcyan;
+  width: 100%;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
