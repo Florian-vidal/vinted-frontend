@@ -42,7 +42,7 @@ const Publish = () => {
             }
             try {
               const response = await axios.post(
-                "https://site--vinted-backend--mjzb7kybbk2h.code.run/publish",
+                "https://site--vinted-backend--mjzb7kybbk2h.code.run/offer/publish",
                 formData,
                 {
                   headers: {
