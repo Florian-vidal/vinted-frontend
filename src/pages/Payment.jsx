@@ -6,7 +6,7 @@ const Payment = () => {
   const { title, price } = location.state || {};
 
   return (
-    <div>
+    <div className="payment-form">
       <h1>Article :  {title}</h1>
       <p>Total à payer : {price} €</p>
       <CheckoutForm title={title} price={price} />

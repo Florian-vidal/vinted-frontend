@@ -65,9 +65,10 @@ const CheckoutForm = ({ title, price }) => {
   return (
     <form onSubmit={handleSubmit}>
       <PaymentElement />
-      <button disabled={!stripe || loading}>
+      <div className="payment-button"><button disabled={!stripe || loading}>
         {loading ? "Processing..." : "Procéder au paiement"}
-      </button>
+      </button></div>
+      
       {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
     </form>
   );
