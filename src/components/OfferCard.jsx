@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const OfferCard = ({ offer }) => {
   return (
-    <article>
+    <article className="home-offer-details">
       <div className="owner-details">
         <p>{offer.owner?.account?.username}</p>
       </div>

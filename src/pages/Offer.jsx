@@ -43,17 +43,18 @@ const Offer = () => {
             alt="No image"
           />
         )}
-        <section>
-          <p>{data.product_price + " €"}</p>
+        <section className="offer-details">
           <p>{data.product_name}</p>
+          <p>{data.product_price + " €"}</p>
+          
           <Link
             to="/payment"
             state={{
               title: data.product_name,
-              price: (data.product_price)
+              price: data.product_price,
             }}
           >
-            Acheter cet article
+            <button>Acheter cet article</button>
           </Link>
         </section>
       </div>

@@ -1,8 +1,15 @@
 /* ----------------------------------- GLOBALS -----------------------------------*/
+body {
+  font-family: Inter, sans-serif;
+}
+
 .container {
   width: 1280px;
   margin: 0 auto;
-  
+}
+
+a {
+  text-decoration: none;
 }
 
 /* ----------------------------------- HEADER -----------------------------------*/
@@ -17,7 +24,7 @@ header .container {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  border-bottom: 1px solid lightgrey
+  border-bottom: 1px solid lightgrey;
 }
 
 header .container input {
@@ -64,10 +71,10 @@ header .container input::placeholder {
   margin-bottom: 20px;
 }
 
-.owner-details {
+/* .owner-details {
   display: flex;
   align-items: center;
-}
+} */
 
 .avatar {
   height: 20px;
@@ -82,6 +89,12 @@ header .container input::placeholder {
   object-fit: cover;
 }
 
+.home-offer-details p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 /* ----------------------------------- OFFER -----------------------------------*/
 
 .offer-page .container {
@@ -89,13 +102,37 @@ header .container input::placeholder {
   gap: 20px;
 }
 
+.offer-page {
+  margin-top: 50px;
+}
+
 .offer-page img {
   width: 450px;
-
+  border-radius: 10px;
 }
 
 .product-image {
   border-radius: 10px;
+}
+
+.offer-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.offer-details p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.offer-details button {
+  background-color: darkcyan;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
 }
 
 /* ----------------------------------- SIGNUP -----------------------------------*/
