@@ -16,6 +16,7 @@ const Publish = () => {
   const [city, setCity] = useState("");
   const [price, setPrice] = useState("");
   const [preview, setPreview] = useState(null);
+  const [errorPrice, setErrorPrice] = useState("");
 
   const token = Cookie.get("token");
 
@@ -175,12 +176,21 @@ const Publish = () => {
               <input
                 type="text"
                 id="price"
+                className={errorPrice ? "alert" : ""}
                 placeholder="0,00 €"
                 onChange={(event) => {
                   setPrice(event.target.value);
+                  if (isNaN(event.target.value) === true) {
+                    setErrorPrice(true);
+                  } else {
+                    setErrorPrice(false);
+                  }
                 }}
                 value={price}
               />
+              {errorPrice && (
+                <p className="red"> Le prix n'est pas au bon format</p>
+              )}
             </div>
             <input type="checkbox" id="trade" />
             <label htmlFor="trade">{`Je suis intéressé(e) par les échanges`}</label>

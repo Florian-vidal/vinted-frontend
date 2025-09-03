@@ -12,26 +12,7 @@ import LogIn from "./pages/Login";
 import Publish from "./pages/Publish";
 import Payment from "./pages/Payment";
 
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
-
-const stripePromise = loadStripe(
-  "pk_test_51S2qp7IgP9MyjZACb6p3bvn2lIkWoLwrgZgMYzthOpkCY2dWb63stZe00aES5eTESdPejph4KnWiMNE53T1Ffz3T006KU2J41u"
-);
-
 function App() {
-
-
-  const options = {
-    mode: "payment",
-    amount: 4242,
-    currency: "eur",
-    // Fully customizable with appearance API.
-    appearance: {
-      /*...*/
-    },
-  };
-
   const [isConnected, setIsConnected] = useState(Cookie.get("token") || false);
   const [title, setTitle] = useState("");
   const [priceMin, setPriceMin] = useState(0);
@@ -66,15 +47,7 @@ function App() {
           element={<LogIn setIsConnected={setIsConnected} />}
         />
         <Route path="/publish" element={<Publish />} />
-        <Route
-          path="/payment"
-          element={
-            <Elements stripe={stripePromise} options={options}>
-              <Payment />
-            </Elements>
-          }
-        />
-
+        <Route path="/payment" element={<Payment />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
     </Router>

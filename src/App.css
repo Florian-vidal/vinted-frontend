@@ -18,6 +18,15 @@ h1 {
   font-weight: bold;
 }
 
+.alert {
+  border: 2px solid red;
+  color: red;
+}
+
+.red {
+  color: red;
+}
+
 /* ----------------------------------- HEADER -----------------------------------*/
 
 header img {
@@ -265,4 +274,5 @@ button {
   align-items: center;
   justify-content: center;
 }
+
 
