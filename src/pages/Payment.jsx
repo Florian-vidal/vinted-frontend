@@ -10,18 +10,15 @@ const stripePromise = loadStripe(
 
 const Payment = () => {
   const location = useLocation();
-  const { title, price } = location.state || {};
+  const { offerDetails } = location.state || {};
+  const title = offerDetails.product_name;
+  const price = offerDetails.product_price;
+
   const options = {
-    // Type de transaction
     mode: "payment",
-    // Montant de la transaction
-    amount: location.state.offerDetails.product_price * 100,
-    // Devise de la transaction
+    amount: price ? price * 100 : 0, // on sécurise pour éviter undefined
     currency: "eur",
-    // On peut customiser l'apparence ici
-    appearance: {
-      /*...*/
-    },
+    appearance: {},
   };
   return (
     // Le composant Elements doit contenir toute notre logique de paiement
