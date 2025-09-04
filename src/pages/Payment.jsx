@@ -11,7 +11,7 @@ const stripePromise = loadStripe(
 const Payment = () => {
   const location = useLocation();
   const { offerDetails } = location.state || {};
-  const title = offerDetails.product_name;
+  const title = offerDetails.product_title;
   const price = offerDetails.product_price;
 
   const options = {
