@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import OfferCard from "../components/OfferCard";
 
 const Home = ({ title, priceMin, priceMax }) => {
-const [data, setData] = useState({ offers: [] });
+const [data, setData] = useState([]);
 
 
   const [isLoading, setIsLoading] = useState(true);
