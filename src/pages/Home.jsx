@@ -47,9 +47,13 @@ const Home = ({ title, priceMin, priceMax }) => {
   ) : (
     <main className="home">
       <div className="container">
-        {data.offers.map((offer) => {
-          return <OfferCard offer={offer} key={offer._id} />;
-        })}
+        {data && data.offers && data.offers.length > 0 ? (
+          data.offers.map((offer) => (
+            <OfferCard offer={offer} key={offer._id} />
+          ))
+        ) : (
+          <p>Aucune offre trouvée</p>
+        )}
       </div>
     </main>
   );
