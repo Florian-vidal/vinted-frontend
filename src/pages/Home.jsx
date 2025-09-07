@@ -31,7 +31,7 @@ const Home = ({ title, priceMin, priceMax }) => {
         const response = await axios.get(
           "https://site--vinted-backend--mjzb7kybbk2h.code.run/offers" + filters
         );
-
+console.log("Réponse API:", response.data); // 👀
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
