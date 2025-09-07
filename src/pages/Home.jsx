@@ -49,7 +49,7 @@ console.log("Réponse API:", response.data); // 👀
     <main className="home">
       <div className="container">
         {data && data.offers && data.offers.length > 0 ? (
-          data.offers.map((offer) => (
+          data.map((offer) => (
             <OfferCard offer={offer} key={offer._id} />
           ))
         ) : (
