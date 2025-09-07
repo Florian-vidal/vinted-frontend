@@ -48,7 +48,7 @@ const CheckoutForm = ({ title, price }) => {
         confirmParams: {
           return_url: "https://tedvin-florian-vidal.netlify.app/",
         },
-        redirect: "if_required",
+        redirect: "always",
       });
 
       if (error) {
