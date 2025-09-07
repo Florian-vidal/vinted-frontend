@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import OfferCard from "../components/OfferCard";
 
 const Home = ({ title, priceMin, priceMax }) => {
-const [data, setData] = useState([]);
-
+  const [data, setData] = useState([]);
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -32,7 +31,7 @@ const [data, setData] = useState([]);
         const response = await axios.get(
           "https://site--vinted-backend--mjzb7kybbk2h.code.run/offers" + filters
         );
-console.log("Réponse API:", response.data); // 👀
+
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -48,10 +47,8 @@ console.log("Réponse API:", response.data); // 👀
   ) : (
     <main className="home">
       <div className="container">
-        {data && data.offers && data.offers.length > 0 ? (
-          data.map((offer) => (
-            <OfferCard offer={offer} key={offer._id} />
-          ))
+        {data.length > 0 ? (
+          data.map((offer) => <OfferCard offer={offer} key={offer._id} />)
         ) : (
           <p>Aucune offre trouvée</p>
         )}
