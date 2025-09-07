@@ -46,7 +46,7 @@ const CheckoutForm = ({ title, price }) => {
         elements,
         clientSecret,
         confirmParams: {
-          return_url: "http://localhost:5173/",
+          return_url: "https://tedvin-florian-vidal.netlify.app/",
         },
         redirect: "if_required",
       });
