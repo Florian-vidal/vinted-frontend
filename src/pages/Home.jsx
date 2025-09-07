@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import OfferCard from "../components/OfferCard";
 
 const Home = ({ title, priceMin, priceMax }) => {
- const [data, setData] = useState(null);
+  const [data, setData] = useState({ offers: [] });
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -42,20 +42,14 @@ const Home = ({ title, priceMin, priceMax }) => {
     fetchData();
   }, [title, priceMin, priceMax]);
 
-  if (isLoading) {
-    return <p>Chargement...</p>;
-  }
-
-  return (
+  return isLoading ? (
+    <p>Chargement...</p>
+  ) : (
     <main className="home">
       <div className="container">
-        {data && data.offers ? (
-          data.offers.map((offer) => (
-            <OfferCard offer={offer} key={offer._id} />
-          ))
-        ) : (
-          <p>Aucune offre trouvée</p>
-        )}
+        {data.offers.map((offer) => {
+          return <OfferCard offer={offer} key={offer._id} />;
+        })}
       </div>
     </main>
   );
